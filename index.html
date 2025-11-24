@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commeres Store</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🛒%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top-nav">
+    <div class="logo"><a href="index.html">ShopSphere</a></div>
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">☰</button>
+    <nav id="mainNav">
+      <a href="index.html#home" class="active">Home</a>
+      <a href="home-saas.html">SaaS Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="account.html">Account</a>
+      <a href="support.html">Support</a>
+      <a href="login.html" class="nav-button">Login</a>
+      <a href="register.html" class="nav-button">Register</a>
+    </nav>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for products">
+      <button id="searchBtn">Search</button>
+      <div class="search-suggestions" id="searchSuggestions"></div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-slider" id="heroSlider">
+        <div class="slide slide-electronics active">
+          <h1>Biggest Festive Sale</h1>
+          <p>Up to 70% off on electronics</p>
+          <button>Shop Now</button>
+        </div>
+        <div class="slide slide-apparel">
+          <h1>New Arrivals</h1>
+          <p>Trendy apparel for everyone</p>
+          <button>Explore</button>
+        </div>
+        <div class="slide slide-deals">
+          <h1>Flash Deals</h1>
+          <p>Limited time offers every day</p>
+          <button>Grab Deals</button>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+      <div class="slider-indicators">
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+      </div>
+    </section>
+
+    <section class="brand-strip">
+      <h2>Brand Partners</h2>
+      <div class="brand-logos">
+        <div class="brand-logo-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/512px-Apple_logo_black.svg.png" alt="Apple" loading="lazy" onerror="this.src='https://cdn.simpleicons.org/apple/000000'; this.style.width='40px'; this.style.height='auto';">
+        </div>
+        <div class="brand-logo-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/512px-Logo_NIKE.svg.png" alt="Nike" loading="lazy" onerror="this.src='https://cdn.simpleicons.org/nike/111111'; this.style.width='80px'; this.style.height='auto';">
+        </div>
+        <div class="brand-logo-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/512px-Samsung_Logo.svg.png" alt="Samsung" loading="lazy" onerror="this.src='https://cdn.simpleicons.org/samsung/1428A0'; this.style.width='120px'; this.style.height='auto';">
+        </div>
+        <div class="brand-logo-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Adidas_Logo.svg/512px-Adidas_Logo.svg.png" alt="Adidas" loading="lazy" onerror="this.src='https://cdn.simpleicons.org/adidas/000000'; this.style.width='80px'; this.style.height='auto';">
+        </div>
+        <div class="brand-logo-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Sony_logo.svg/512px-Sony_logo.svg.png" alt="Sony" loading="lazy" onerror="this.src='https://cdn.simpleicons.org/sony/000000'; this.style.width='100px'; this.style.height='auto';">
+        </div>
+        <div class="brand-logo-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Zara_Logo.svg/512px-Zara_Logo.svg.png" alt="Zara" loading="lazy" onerror="this.src='https://cdn.simpleicons.org/zara/000000'; this.style.width='80px'; this.style.height='auto';">
+        </div>
+      </div>
+    </section>
+
+    <section class="featured" id="featured">
+      <h2>Featured Products</h2>
+      <div class="product-grid" id="featuredGrid"></div>
+    </section>
+
+    <section class="categories" id="categories">
+      <h2>Shop by Category</h2>
+      <p>Browse our wide range of product categories</p>
+      <div class="category-grid">
+        <article class="category-electronics">
+          <span class="category-icon"></span>
+          <h3>Electronics</h3>
+          <p>Mobiles, laptops, audio gear & accessories.</p>
+          <span class="category-count">1,234 items</span>
+        </article>
+        <article class="category-fashion">
+          <span class="category-icon"></span>
+          <h3>Fashion</h3>
+          <p>Top trends for men, women and kids.</p>
+          <span class="category-count">856 items</span>
+        </article>
+        <article class="category-home">
+          <span class="category-icon"></span>
+          <h3>Home & Living</h3>
+          <p>Furniture, décor and kitchen upgrades.</p>
+          <span class="category-count">642 items</span>
+        </article>
+        <article class="category-beauty">
+          <span class="category-icon"></span>
+          <h3>Beauty & Wellness</h3>
+          <p>Skincare, makeup and grooming picks.</p>
+          <span class="category-count">423 items</span>
+        </article>
+        <article class="category-sports">
+          <span class="category-icon"></span>
+          <h3>Health & Fitness</h3>
+          <p>Health supplements, vitamins and fitness equipment.</p>
+          <span class="category-count">321 items</span>
+        </article>
+        <article class="category-grocery">
+          <span class="category-icon"></span>
+          <h3>Sports & Outdoors</h3>
+          <p>Workout apparel, equipment and gear.</p>
+          <span class="category-count">567 items</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="flash-deals">
+      <div class="flash-deals-content">
+        <h2>Flash Deals</h2>
+        <p class="flash-subtitle">< Limited time offers every day ></p>
+        <button>Grab Deals</button>
+        <div class="slider-indicators">
+          <span class="active"></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="deals-grid">
+      <div class="deal-card">
+        <h3>Today's Deals</h3>
+        <p>Limited time flash sales refreshed daily.</p>
+        <button>View Deals</button>
+      </div>
+      <div class="deal-card">
+        <h3>Top Selling</h3>
+        <p>Our most-loved products of the week.</p>
+        <button>See Top Picks</button>
+      </div>
+      <div class="deal-card">
+        <h3>New Arrivals</h3>
+        <p>Fresh styles and latest launches.</p>
+        <button>Discover</button>
+      </div>
+    </section>
+
+    <section class="top-selling">
+      <h2>Top Selling Products</h2>
+      <p class="section-subtitle">Our most-loved products of the week</p>
+      <div class="product-grid" id="topSellingGrid"></div>
+    </section>
+
+    <section class="new-arrivals">
+      <h2>New Arrivals</h2>
+      <p class="section-subtitle">Fresh styles and latest launches</p>
+      <div class="product-grid" id="newArrivalsGrid"></div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <span class="logo-icon">🛒</span>
+        <span class="logo-text">ShopSphere</span>
+      </div>
+      <p class="footer-description">Your trusted destination for quality products and exceptional shopping experiences. Discover the best deals and latest trends.</p>
+      <div class="social">
+        <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h3>Quick Links</h3>
+      <a href="index.html#home">Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Shopping Cart</a>
+      <a href="account.html">My Account</a>
+    </div>
+    <div>
+      <h3>Customer Service</h3>
+      <a href="support.html">Contact Support</a>
+      <a href="#">Track Order</a>
+      <a href="#">Shipping Info</a>
+      <a href="#">Returns & Exchanges</a>
+      <a href="#">FAQ</a>
+    </div>
+    <div>
+      <h3>Policies</h3>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Returns Policy</a>
+      <a href="#">Shipping Policy</a>
+      <a href="#">Cookie Policy</a>
+    </div>
+    <div>
+      <h3>Company</h3>
+      <a href="#">About Us</a>
+      <a href="#">Careers</a>
+      <a href="#">Blog</a>
+      <a href="#">Press</a>
+      <a href="#">Partners</a>
+    </div>
+    <div class="footer-newsletter">
+      <h3>Stay Connected</h3>
+      <p>Subscribe to our newsletter for exclusive deals and updates.</p>
+      <form class="newsletter">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="footer-copyright">© 2024 ShopSphere. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
